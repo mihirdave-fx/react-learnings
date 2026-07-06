@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #17202a;
+}
+
+ol {
+  list-style-type: decimal;
+
+  & li {
+    background-color: #212f3c;
+    list-style-position: inside;
+  }
+}
