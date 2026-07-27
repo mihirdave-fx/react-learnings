@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* colors list:
+#EDF1D6
+#9DC08B
+#609966
+#40513B */
+
+/* old colors:
+--color-primary: #1f2937;
+  --color-secondary: #d4a373; */
+
+@theme {
+  --color-primary: #9dc08b;
+  --color-secondary: #609966;
+  --color-light: #edf1d6;
+  --color-dark: #2b5748;
+}
+
+.container {
+  padding: 0 50px;
+}
+
+.active {
+  color: #2b5748;
+  background: var(--color-dark);
+  color: white;
+  border-radius: 50px;
+}
