@@ -1,10 +1,23 @@
+import { useState, useEffect } from "react";
+
 import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 
-import productsData from "../../api/productsData.json";
+import { getProducts } from "../../api/productApi";
+import { BASE_URL } from "../../api/client";
 
 const Products = ({ isHomePageContent, limit, className = "" }) => {
-  const productToShow = limit ? productsData.slice(0, limit) : productsData;
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const data = await getProducts();
+      setProducts(data);
+    };
+    fetchProducts();
+  }, []);
+
+  const productToShow = limit ? products.slice(0, limit) : products;
 
   return (
     <div className="container">
@@ -33,7 +46,12 @@ const Products = ({ isHomePageContent, limit, className = "" }) => {
             >
               <Link to={`/products/${data.id}`}>
                 <img
-                  src={data.img}
+                  /* 2. Prepend BASE_URL to relative paths like /static/uploads/... */
+                  src={
+                    data.image?.startsWith("http")
+                      ? data.image
+                      : `${BASE_URL}${data.image}`
+                  }
                   alt={data.title}
                   className="h-[220px] w-[150px] object-cover rounded-md"
                 />

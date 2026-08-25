@@ -5,9 +5,10 @@ import { CartContext } from "../../features/ContextProvider";
 import { useContext, useState } from "react";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
+import { BASE_URL } from "../../api/client";
 
 const ProductDetails = ({ product }) => {
-  const { id, img, title, price, rating, color, size, description } = product;
+  const { id, image, title, price, rating, color, size, description } = product;
 
   const { dispatch } = useContext(CartContext);
 
@@ -19,6 +20,9 @@ const ProductDetails = ({ product }) => {
     setIsAdded(true);
   };
 
+  // Construct full image URL accurately
+  const imageUrl = image?.startsWith("http") ? image : `${BASE_URL}${image}`;
+
   return (
     <>
       <section>
@@ -26,7 +30,7 @@ const ProductDetails = ({ product }) => {
           <div className="grid grid-cols-12 gap-0 sm:gap-4">
             <div className="col-span-full sm:col-span-6 p-4 mt-6 mb-4 sm:mb-10">
               <div className="flex justify-end">
-                <img src={img} alt={title} className="w-100 shadow-xl" />
+                <img src={imageUrl} alt={title} className="w-100 shadow-xl" />
               </div>
             </div>
             <div className="col-span-full sm:col-span-6 p-4 mt-2 sm:mt-6 mb-10">

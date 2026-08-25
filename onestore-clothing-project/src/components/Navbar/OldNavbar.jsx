@@ -7,9 +7,9 @@ import { MdClose, MdMenu } from "react-icons/md";
 
 import { GiLoincloth } from "react-icons/gi";
 import { useState } from "react";
-import CartSignin from "../Cart-Signin/CartSignin";
+import Cart from "../Cart/Cart";
 
-const NewNavbar = () => {
+const OldNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -72,7 +72,7 @@ const NewNavbar = () => {
         </div>
         <div className="flex items-center gap-6">
           {/* cart */}
-          <CartSignin />
+          <Cart />
           {/* signin */}
           <Link
             to="/sign-in"
@@ -94,4 +94,4 @@ const NewNavbar = () => {
   );
 };
 
-export default NewNavbar;
+export default OldNavbar;
