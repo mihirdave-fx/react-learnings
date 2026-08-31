@@ -1,6 +1,6 @@
 import { FaDollarSign } from "react-icons/fa6";
 import { CiShoppingCart, CiHeart } from "react-icons/ci";
-import { FaStar } from "react-icons/fa";
+import { FaRulerVertical, FaStar } from "react-icons/fa";
 import { CartContext } from "../../features/ContextProvider";
 import { useContext, useState } from "react";
 import { toast } from "react-toastify";
@@ -48,37 +48,34 @@ const ProductDetails = ({ product }) => {
                   {rating}
                 </div>
                 {/* sizes */}
-                <div className="flex justify-between items-center w-60">
+                <div className="flex gap-12 items-center">
                   <p>Select Size</p>
-                  <p className="text-sm text-secondary">
-                    <a href="#" className="cursor-pointer hover:text-dark">
+                  <div className="text-sm flex items-center justify-center gap-0.5 text-dark font-semibold">
+                    <a href="#" className="cursor-pointer hover:text-secondary">
                       Size Chart
                     </a>
-                  </p>
+                    <p>
+                      <FaRulerVertical />
+                    </p>
+                  </div>
                 </div>
                 <div className="inline-flex gap-2 items-center">
-                  <p className="border rounded-full w-8 h-8 text-center hover:bg-primary hover:text-white">
-                    {size}
-                  </p>
+                  <div className="border rounded-full w-6 h-6 text-center hover:bg-dark hover:text-white cursor-pointer text-sm">
+                    <p>{size}</p>
+                  </div>
                 </div>
                 {/* buttons */}
                 <div className="inline-flex gap-4 font-semibold">
-                  <button
-                    href="#"
-                    className="w-30 border text-center rounded-full cursor-pointer hover:bg-dark hover:text-white"
-                  >
+                  <button className="w-fit px-6 py-2 rounded-2xl text-base text-neutral-50 bg-secondary hover:bg-dark transition-colors duration-200 cursor-pointer text-sm">
                     Wishlist
                   </button>
                   {isAdded ? (
-                    <Link
-                      to="/cart"
-                      className="w-30 border text-center rounded-full cursor-pointer bg-dark text-white hover:opacity-90 leading-normal flex items-center justify-center"
-                    >
-                      Go to cart
-                    </Link>
+                    <button className="w-fit px-6 py-2 rounded-2xl text-base text-neutral-50 bg-secondary hover:bg-dark transition-colors duration-200 cursor-pointer text-sm">
+                      <Link to="/cart">Go to cart</Link>
+                    </button>
                   ) : (
                     <button
-                      className="w-30 border text-center rounded-full cursor-pointer hover:bg-dark hover:text-white"
+                      className="w-fit px-6 py-2 rounded-2xl text-base text-neutral-50 bg-secondary hover:bg-dark transition-colors duration-200 cursor-pointer text-sm"
                       onClick={handleAddToCart}
                     >
                       Add to cart

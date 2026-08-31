@@ -15,13 +15,25 @@ const TopProducts = ({ isHomePageContent, limit }) => {
         <div className="flex justify-between items-center">
           {/* left side content */}
           <div className="text-left mb-24">
-            <p data-aos="fade-up" className="text-sm text-dark">
+            <p
+              data-aos="fade-up"
+              data-aos-once="true"
+              className="text-sm text-dark"
+            >
               Top Rated Products for you
             </p>
-            <h1 data-aos="fade-up" className="text-3xl font-bold">
+            <h1
+              data-aos="fade-up"
+              data-aos-once="true"
+              className="text-3xl font-bold"
+            >
               Top Rated Products
             </h1>
-            <p data-aos="fade-up" className="text-xs text-gray-400">
+            <p
+              data-aos="fade-up"
+              data-aos-once="true"
+              className="text-xs text-gray-400"
+            >
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             </p>
           </div>
@@ -32,6 +44,7 @@ const TopProducts = ({ isHomePageContent, limit }) => {
                 <Link
                   to="/top-products"
                   data-aos="slide-right"
+                  data-aos-once="true"
                   className="flex items-center gap-1 text-secondary hover:text-dark"
                 >
                   View all{" "}
@@ -49,6 +62,7 @@ const TopProducts = ({ isHomePageContent, limit }) => {
           {productToShow.map((data) => (
             <div
               data-aos="zoom-in"
+              data-aos-once="true"
               key={data.id}
               className="rounded-2xl shadow-xl bg-white hover:bg-black/80 hover:text-white relative duration-300 group max-w-[300px] mb-5 md:mb-0"
             >

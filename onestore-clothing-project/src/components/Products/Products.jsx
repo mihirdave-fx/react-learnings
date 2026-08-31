@@ -23,13 +23,25 @@ const Products = ({ isHomePageContent, limit, className = "" }) => {
     <div className="container">
       {/* Header section */}
       <div className="text-center mb-10 max-w-[600px] mx-auto">
-        <p data-aos="fade-up" className="text-sm text-dark">
+        <p
+          data-aos="fade-up"
+          data-aos-once="true"
+          className="text-sm text-dark"
+        >
           Top Selling Products for you
         </p>
-        <h1 data-aos="fade-up" className="text-3xl font-bold">
+        <h1
+          data-aos="fade-up"
+          data-aos-once="true"
+          className="text-3xl font-bold"
+        >
           Products
         </h1>
-        <p data-aos="fade-up" className="text-xs text-gray-400">
+        <p
+          data-aos="fade-up"
+          data-aos-once="true"
+          className="text-xs text-gray-400"
+        >
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
           asperiores modi Sit asperiores modi
         </p>
@@ -41,6 +53,7 @@ const Products = ({ isHomePageContent, limit, className = "" }) => {
             <div
               data-aos="fade-up"
               data-aos-delay={data.aosDelay}
+              data-aos-once="true"
               key={data.id}
               className="space-y-3 transition delay-150 duration-700 ease-in-out hover:-translate-y-1 hover:scale-105"
             >
@@ -73,6 +86,7 @@ const Products = ({ isHomePageContent, limit, className = "" }) => {
             <Link
               to="/products"
               data-aos="slide-up"
+              data-aos-once="true"
               className="text-center mt-10 cursor-pointer bg-secondary hover:bg-dark text-white py-1 px-5 rounded-md "
             >
               View All Products

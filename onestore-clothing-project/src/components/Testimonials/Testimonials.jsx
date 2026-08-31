@@ -66,19 +66,31 @@ const Testimonials = () => {
       <div className="container">
         {/* Header section */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
-          <p data-aos="fade-up" className="text-sm text-dark">
+          <p
+            data-aos="fade-up"
+            data-aos-once="true"
+            className="text-sm text-dark"
+          >
             What our customers are saying
           </p>
-          <h1 data-aos="fade-up" className="text-3xl font-bold">
+          <h1
+            data-aos="fade-up"
+            data-aos-once="true"
+            className="text-3xl font-bold"
+          >
             Testimonials
           </h1>
-          <p data-aos="fade-up" className="text-xs text-gray-400">
+          <p
+            data-aos="fade-up"
+            data-aos-once="true"
+            className="text-xs text-gray-400"
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo velit
             accusamus alias optio iure, aut voluptas!
           </p>
         </div>
 
-        <div className="w-full min-w-0" data-aos="zoom-in">
+        <div className="w-full min-w-0" data-aos="zoom-in" data-aos-once="true">
           <Slider {...settings}>
             {TestimonialData.map((data) => (
               <div className="my-6">

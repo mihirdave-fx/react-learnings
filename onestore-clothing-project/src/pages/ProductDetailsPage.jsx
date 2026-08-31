@@ -22,9 +22,6 @@ const ProductDetailsPage = () => {
 
   return (
     <>
-      <div className="flex justify-center">
-        <h1>Product Detail Page</h1>
-      </div>
       <ProductDetails product={product} />
     </>
   );

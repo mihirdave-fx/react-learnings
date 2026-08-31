@@ -15,6 +15,7 @@ import CartPage from "../pages/CartPage";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import AdminProductsPage from "../pages/AdminProductsPage";
+import AdminHomePage from "../components/Admin/AdminHomePage";
 
 export const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ export const router = createBrowserRouter([
         element: <CartPage />,
       },
     ],
+  },
+  {
+    path: "admin",
+    element: <AdminHomePage />,
   },
   {
     path: "admin/products",

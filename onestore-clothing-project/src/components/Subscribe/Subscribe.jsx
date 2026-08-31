@@ -13,6 +13,7 @@ const Subscribe = () => {
   return (
     <div
       data-aos="zoom-in"
+      data-aos-once="true"
       className="mb-15 bg-gray-100 text-white "
       style={BannerImg}
     >
@@ -23,6 +24,7 @@ const Subscribe = () => {
           </h1>
           <input
             data-aos="fade-down"
+            data-aos-once="true"
             type="text"
             placeholder="Enter your email"
             className="w-full p-3 bg-white text-black"
